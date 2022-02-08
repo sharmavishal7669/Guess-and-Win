@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guess_and_win/utilities/bottomNavigationBar.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -12,6 +13,7 @@ class HomeScreen extends StatelessWidget {
           child: Text('Guess & Earn'),
         ),
       ),
+      bottomNavigationBar: BottomNavigator(),
     );
   }
 }
