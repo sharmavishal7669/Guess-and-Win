@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guess_and_win/screens/home_page.dart';
+import 'package:guess_and_win/screens/home_screen.dart';
 import 'package:guess_and_win/screens/login_screen.dart';
 import 'package:guess_and_win/utilities/routes.dart';
 
