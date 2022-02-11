@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:guess_and_win/screens/home_screen.dart';
 import 'package:guess_and_win/screens/login_screen.dart';
+import 'package:guess_and_win/screens/profile_screen.dart';
 import 'package:guess_and_win/utilities/routes.dart';
 
 void main() {
@@ -11,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/home",
+      initialRoute: "/profile",
       routes: {
         "/": (context) => LoginScreen(),
         MyRoutes.homeRoute: (context) => HomeScreen(),
         MyRoutes.loginRoute: (context) => LoginScreen(),
+        MyRoutes.profileRoute: (context) => ProfileScreen()
       },
     );
   }
