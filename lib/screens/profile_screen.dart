@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guess_and_win/utilities/bottomNavigationBar.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -13,7 +14,6 @@ class ProfileScreen extends StatelessWidget {
       body: Column(
         children: [
           Card(
-            clipBehavior: Clip.antiAlias,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -40,15 +40,66 @@ class ProfileScreen extends StatelessWidget {
                   child: ButtonBar(
                     alignment: MainAxisAlignment.start,
                     children: [
-                      ElevatedButton(onPressed: () {}, child: Text('Recharge'))
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Text('Recharge'),
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.green),
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
           ),
+          ListView(
+            shrinkWrap: true,
+            children: [
+              Card(
+                child: ListTile(
+                  title: Text('App Download'),
+                  leading: Icon(Icons.download),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  title: Text('Change Password'),
+                  leading: Icon(Icons.security_sharp),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  title: Text('Complaints & Suggestions'),
+                  leading: Icon(Icons.chat),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  title: Text('About'),
+                  leading: Icon(Icons.help),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: SizedBox(
+              width: 180,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text('Logout'),
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.redAccent),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
+      bottomNavigationBar: BottomNavigator(),
     );
   }
 }
